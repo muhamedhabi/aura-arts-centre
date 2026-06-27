@@ -112,16 +112,15 @@ export default function HomeClient({ content, images }: HomeClientProps) {
             className="loading-screen"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
-            style={{ background: '#000' }}
           >
-            <video 
-              src="/loading_video.webm" 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} 
-            />
+            <motion.h1 
+              className="loading-text"
+              initial={{ letterSpacing: '0px', opacity: 0 }}
+              animate={{ letterSpacing: '10px', opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+              AURA
+            </motion.h1>
           </motion.div>
         )}
       </AnimatePresence>
