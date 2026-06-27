@@ -36,11 +36,11 @@ async function main() {
 
   // Setup initial images
   const images = [
-    '/gallery/IMG_8634.AVIF',
-    '/gallery/IMG_8635.AVIF',
-    '/gallery/IMG_8636.AVIF',
-    '/gallery/IMG_8637.AVIF',
-    '/gallery/IMG_8638.AVIF'
+    '/gallery/IMG_8634.webp',
+    '/gallery/IMG_8635.webp',
+    '/gallery/IMG_8636.webp',
+    '/gallery/IMG_8637.webp',
+    '/gallery/IMG_8638.webp'
   ]
 
   // delete all old images to prevent duplicates if seeding multiple times
