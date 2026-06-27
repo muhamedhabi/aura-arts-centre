@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
+  secret: process.env.AUTH_SECRET || "aura_arts_temp_secret_key_2026_xyz!",
   providers: [
     CredentialsProvider({
       name: "Credentials",
