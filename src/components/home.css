@@ -47,7 +47,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
   z-index: 1;
   pointer-events: none;
 }
@@ -63,13 +63,13 @@
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #fff;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  color: var(--text-color);
+  text-shadow: none;
 }
 
 .hero-desc {
   font-size: 1.25rem;
-  color: #e2e8f0;
+  color: #334155;
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
 }
@@ -78,7 +78,7 @@
   display: inline-block;
   padding: 1rem 2.5rem;
   background-color: var(--accent-color);
-  color: #0f172a;
+  color: #ffffff;
   font-weight: 600;
   border-radius: 30px;
   text-transform: uppercase;
@@ -90,7 +90,7 @@
 .cta-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 30px var(--accent-glow);
-  color: #000;
+  color: #ffffff;
 }
 
 /* About Section */
@@ -120,7 +120,7 @@
 }
 
 .about-content p {
-  color: #cbd5e1;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
@@ -222,7 +222,7 @@
 }
 
 .footer-brand p {
-  color: #94a3b8;
+  color: #475569;
   max-width: 300px;
 }
 
@@ -240,7 +240,7 @@
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1rem;
-  color: #e2e8f0;
+  color: #334155;
 }
 
 .footer-bottom {

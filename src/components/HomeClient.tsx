@@ -146,7 +146,17 @@ export default function HomeClient({ content, images }: HomeClientProps) {
             variants={containerVariants}
             initial="hidden"
             animate={!loading ? "visible" : "hidden"}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
+            <motion.div variants={itemVariants} style={{ marginBottom: '2rem' }}>
+              <Image 
+                src="/auralogo.png" 
+                alt="Aura Arts Logo" 
+                width={200} 
+                height={200}
+                style={{ objectFit: 'contain' }}
+              />
+            </motion.div>
             <motion.span variants={itemVariants} className="subtitle">Welcome to</motion.span>
             <motion.h1 variants={itemVariants} className="hero-title">
               {content.title?.split('\n')[0] || "Aura Arts Centre"}

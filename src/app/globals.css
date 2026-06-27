@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
-  --bg-color: #0f172a; /* Deep elegant slate/navy */
-  --section-bg: #1e293b;
-  --text-color: #f8fafc;
-  --accent-color: #d4af37; /* Gold */
-  --accent-glow: rgba(212, 175, 55, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --bg-color: #ffffff; 
+  --section-bg: #f8fafc;
+  --text-color: #0f172a;
+  --accent-color: #e3000f; /* Aura Red */
+  --accent-glow: rgba(227, 0, 15, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.1);
 }
 
 * {
