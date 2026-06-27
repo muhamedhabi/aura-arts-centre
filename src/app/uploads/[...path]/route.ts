@@ -3,8 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { Readable } from 'stream'
 
-export async function GET(request: Request, { params }: { params: { path: string[] } }) {
-  const filePath = path.join(process.cwd(), 'public', 'uploads', ...params.path)
+export async function GET(request: Request, { params }: { params: Promise<{ path: string[] }> }) {
+  const resolvedParams = await params
+  const filePath = path.join(process.cwd(), 'public', 'uploads', ...resolvedParams.path)
   
   try {
     const stat = fs.statSync(filePath)
