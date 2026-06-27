@@ -115,7 +115,7 @@ export default function HomeClient({ content, images }: HomeClientProps) {
             style={{ background: '#000' }}
           >
             <video 
-              src="/loading_video.mp4" 
+              src="/loading_video.webm" 
               autoPlay 
               loop 
               muted 
