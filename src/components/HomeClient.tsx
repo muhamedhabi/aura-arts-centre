@@ -34,16 +34,20 @@ const PlayableVideo = ({ src, className }: { src: string; className?: string }) 
   }
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: '#fff' }}>
+      <img 
+        src="/auralogo.png" 
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', padding: '30%', zIndex: 0 }} 
+        alt="Loading..." 
+      />
       <video 
         ref={videoRef}
         autoPlay 
         loop 
         muted
         playsInline
-        poster="/auralogo.png"
         className={className}
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        style={{ position: 'relative', zIndex: 1, width: '100%', height: '100%', objectFit: 'cover' }}
         src={src}
       />
       <button 
@@ -112,15 +116,16 @@ export default function HomeClient({ content, images }: HomeClientProps) {
             className="loading-screen"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
+            style={{ background: '#000' }}
           >
-            <motion.h1 
-              className="loading-text"
-              initial={{ letterSpacing: '0px', opacity: 0 }}
-              animate={{ letterSpacing: '10px', opacity: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-            >
-              AURA
-            </motion.h1>
+            <video 
+              src="/loading_video.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} 
+            />
           </motion.div>
         )}
       </AnimatePresence>
